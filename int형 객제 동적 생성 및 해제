@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    int * x;
+    x = calloc(1,sizeof(int)); // 힙 영역에 할당하고 할당한 메모리의 첫번쨰 주소 반환
+    if(x == NULL){
+        puts("메모리 할당에 실패했습니다.");
+    }
+    else{
+        *x = 57;
+        printf("*x = %d\n",*x);
+        free(x); // 포인터에 할당된 메모리 해제
+    }
+    return 0;
+}
