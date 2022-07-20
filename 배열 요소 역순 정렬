@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #define swap(type,x,y) do{type t = x; x = y; y = t;} while(0)
+// do - while을 쓰는 이유 : 안그러면 세미콜론 중복과 같은 불상사가 일어날 수 있음 (if else 문)
 
 void ary_reverse(int a[], int n)
 {
